@@ -12,13 +12,14 @@ public class Test {
         
         letters.remove(" ");
         
-        //The next steps can be done with iterators and no comma will be at the end of each row,
-        //but it may lose with readability.
         for (String letter : letters) {
         	 System.out.print(letter+ ": ");
+        	 String out = "";
         	  for (String word : words) {
         		  if(word.indexOf(letter.charAt(0))!=-1) {
-        			  System.out.print(word +", ");
+        		  	  out += word;
+        			  System.out.print(out);
+        			  out = ", ";
         			  
         		  }
         	  }
